@@ -3,6 +3,7 @@ import {faker} from '@faker-js/faker'; //nope
 import { cartReducer } from './Reducer';
 
 const Cart = createContext();
+faker.seed(76);
 
 const Context = ({children}) => {
 
