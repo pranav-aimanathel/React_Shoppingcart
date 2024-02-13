@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   const {
     state : { cart },
-    dispatch
+    dispatch,
+    productDispatch,
   } = CartState();
   return (
     <Navbar bg="dark" variant="dark"className= "justify-content-between">
@@ -20,7 +21,14 @@ const Header = () => {
                 <FormControl
                  style={{width: 500}}
                  className='m-auto'
-                placeholder="search here"/>
+                placeholder="search here"
+                onChange={(e) => {
+                  productDispatch({
+                    type: 'FILTER_BY_SEARCH',
+                    payload: e.target.value,
+                  });
+                }}
+                />
             </Navbar.Text>
             <Nav>
               <Dropdown alignRight>
