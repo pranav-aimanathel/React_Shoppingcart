@@ -84,7 +84,7 @@ const Filter = () => {
              style={{ cursor: "pointer"}} />
         </span>
         <Button variant="light"
-        onChange={() => 
+        onClick={() => 
             productDispatch({
                 type: 'CLEAR_FILTERS',
             })

@@ -25,18 +25,18 @@ export const productReducer = (state, action) => {
         case 'FILTER_BY_STOCK':
             return { ...state, byStock: !state.byStock };
         case 'FILTER_BY_DELIVERY':
-            return { ...state, byStock: !state.byFastDelivery };
+            return { ...state, byFastDelivery: !state.byFastDelivery };
         case 'FILTER_BY_RATING':
-            return { ...state, byStock: action.payload };
+            return { ...state, byRating: action.payload };
         case 'FILTER_BY_SEARCH':
-            return { ...state, byStock: action.payload };  
+            return { ...state, searchQuery: action.payload };  
         case 'CLEAR_FILTERS':
             return {
                 byStock: false,
                 byFastDelivery: false,
                 byRating: 0,
                 searchQuery: "",
-            }
+            };
         break;
         
      
